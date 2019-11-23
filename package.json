@@ -1,0 +1,23 @@
+{
+  "name": "mediator",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "tsc -w",
+    "test": "jest"
+  },
+  "dependencies": {
+    "yargs": "^15.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.12",
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.1",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2"
+  },
+  "author": "Yasuaki Uechi <y@uechi.io> (https://uechi.io/)",
+  "license": "Apache-2.0",
+  "main": "index.js"
+}
