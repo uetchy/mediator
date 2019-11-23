@@ -5,19 +5,17 @@ export interface Filter {
 
 export type Rule = BlockRule | CosmeticRule;
 
-export interface BlockRule {
+interface BaseRule {
+  type: string;
+  domain: string | null;
+}
+
+export interface BlockRule extends BaseRule {
   type: "block";
-  domain: string;
   content: string;
 }
 
-export interface CosmeticRule {
+export interface CosmeticRule extends BaseRule {
   type: "cosmetic";
-  domain: string;
-  content: Element[];
-}
-
-export interface Element {
-  name: string;
-  attributes: Record<string, string>;
+  content: string;
 }

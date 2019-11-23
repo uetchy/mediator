@@ -10,21 +10,12 @@ const target = [
       {
         domain: "*stackexchange.com",
         type: "cosmetic",
-        content: [
-          {
-            name: "div",
-            attributes: {
-              class: "s-hero test",
-              id: "nice"
-            }
-          },
-          {
-            name: "div",
-            attributes: {
-              id: "js-gdpr-consent-banner"
-            }
-          }
-        ]
+        content: '.s-hero[class="test"][id="nice"]'
+      },
+      {
+        domain: "*stackexchange.com",
+        type: "cosmetic",
+        content: "#js-gdpr-consent-banner"
       }
     ]
   }

@@ -2,6 +2,7 @@
   "name": "mediator",
   "version": "0.0.0",
   "scripts": {
+    "build": "tsc && shx chmod +x lib/cli.js",
     "dev": "tsc -w",
     "test": "jest"
   },
@@ -13,11 +14,13 @@
     "@types/node": "^12.12.12",
     "jest": "^24.9.0",
     "nodemon": "^2.0.1",
+    "shx": "^0.3.2",
     "ts-jest": "^24.2.0",
     "ts-node": "^8.5.2",
     "typescript": "^3.7.2"
   },
   "author": "Yasuaki Uechi <y@uechi.io> (https://uechi.io/)",
   "license": "Apache-2.0",
-  "main": "index.js"
+  "main": "index.js",
+  "bin": "lib/cli.js"
 }

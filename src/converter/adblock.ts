@@ -26,16 +26,11 @@ export default function convert(filters: Filter[]): string {
     for (const rule of filter.rules) {
       switch (rule.type) {
         case "cosmetic":
-          for (const element of rule.content) {
-            data += `${rule.domain}##${element.name.toUpperCase()}`;
-            for (const key in element.attributes) {
-              data += `[${key}="${element.attributes[key]}"]`;
-            }
-            data += "\n";
-          }
+          data += `${rule.domain ?? ""}##${rule.content}\n`;
           break;
         case "block":
           data += `||${rule.content}^\n`;
+          break;
       }
     }
   }

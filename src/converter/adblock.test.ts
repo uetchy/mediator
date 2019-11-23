@@ -8,29 +8,20 @@ const source = [
       {
         domain: "*stackexchange.com",
         type: "cosmetic",
-        content: [
-          {
-            name: "div",
-            attributes: {
-              class: "s-hero test",
-              id: "nice"
-            }
-          },
-          {
-            name: "div",
-            attributes: {
-              id: "js-gdpr-consent-banner"
-            }
-          }
-        ]
+        content: '.s-hero[class="test"][id="nice"]'
+      },
+      {
+        domain: "*stackexchange.com",
+        type: "cosmetic",
+        content: "#js-gdpr-consent-banner"
       }
     ]
   }
 ] as Filter[];
 
 const target = `! *** StackOverflow *** !
-*stackexchange.com##DIV[class="s-hero test"][id="nice"]
-*stackexchange.com##DIV[id="js-gdpr-consent-banner"]
+*stackexchange.com##.s-hero[class="test"][id="nice"]
+*stackexchange.com###js-gdpr-consent-banner
 `;
 
 it("convert correctly", () => {
