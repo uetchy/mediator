@@ -8,12 +8,12 @@ const target = [
     name: "StackOverflow",
     rules: [
       {
-        domain: "*stackexchange.com",
+        domain: "*.stackexchange.com",
         type: "cosmetic",
         content: '.s-hero[class="test"][id="nice"]'
       },
       {
-        domain: "*stackexchange.com",
+        domain: "*.stackexchange.com",
         type: "cosmetic",
         content: "#js-gdpr-consent-banner"
       }
